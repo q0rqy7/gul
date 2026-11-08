@@ -565,11 +565,12 @@
   }
 
   const replay = () => { t0 = performance.now(); };
+  // tap / click switches to the next flower style and blooms everything again
+  const nextPalette = () => { palette = (palette + 1) % PALETTES.length; replay(); };
   window.addEventListener('resize', resize);
-  screen.addEventListener('click', replay);
+  screen.addEventListener('click', nextPalette);
   window.addEventListener('keydown', (e) => {
     if (e.key === ' ' || e.key === 'r') replay();
-    if (e.key === 'p' || e.key === 'c') { palette = (palette + 1) % PALETTES.length; replay(); }
   });
 
   // ?t=8 starts 8s into the bloom, ?p=1 picks a palette
