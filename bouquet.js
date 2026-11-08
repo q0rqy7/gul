@@ -12,7 +12,7 @@
   const WORLD_W = 1000;
   const WORLD_H = 1100;
   const FPS = 30;
-  const DEDICATION = 'To my, botam';
+  const DEDICATION = 'To my botam';
 
   const PALETTES = [
     { // pink lilies, like the photos
